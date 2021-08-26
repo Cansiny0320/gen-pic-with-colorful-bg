@@ -19,7 +19,13 @@ input.addEventListener('change', e => {
       scale: 0.6,
     })
     tips.textContent = ''
-    const mainColor = result[0].color
+    const mainColor = result.find(
+      e =>
+        e.color
+          .slice(4, -1)
+          .split(',')
+          .reduce((acc, cur) => acc + cur) > 255
+    ).color
     image.src = this.result
     label.style.backgroundColor = mainColor
   }
