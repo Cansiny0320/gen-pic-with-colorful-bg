@@ -38,8 +38,13 @@ label {
 }
 
 img {
-  height: 75%;
-  max-width: 85%;
+  max-height: 75%;
+  max-width: 75%;
   object-fit: contain;
   box-shadow: 15px 15px 20px 15px rgba(0, 0, 0, 0.35);
+}
+
+.tips {
+  font-size: 3em;
+  color: #fff;
 }
