@@ -38,7 +38,8 @@ label {
 }
 
 img {
-  height: 73%;
+  height: 75%;
+  max-width: 85%;
   object-fit: contain;
   box-shadow: 15px 15px 20px 15px rgba(0, 0, 0, 0.35);
 }
