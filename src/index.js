@@ -6,7 +6,7 @@ const colorInput = document.querySelector('input[type="color"]')
 const tips = document.querySelector('.tips')
 let canvas = null
 
-input.addEventListener('change', e => {
+input.addEventListener('change', () => {
   const fileReader = new FileReader()
   const file = input.files[0]
   fileReader.readAsDataURL(file)
@@ -24,8 +24,10 @@ input.addEventListener('change', e => {
         e.color
           .slice(4, -1)
           .split(',')
+          .map(e => parseInt(e))
           .reduce((acc, cur) => acc + cur) > 255
     ).color
+
     image.src = this.result
     label.style.backgroundColor = mainColor
   }
