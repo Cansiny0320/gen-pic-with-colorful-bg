@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <title>图片美化</title>
+  </head>
+  <body>
+    <input
+      type="file"
+      id="input-image"
+      accept="image/png, image/jpeg, image/jpg"
+    />
+    <div class="wrapper">
+      <div class="generate">
+        <label for="input-image">
+          <img />
+        </label>
+      </div>
+      <div class="func">
+        <input type="color" />
+        <button>保存图片</button>
+      </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/rgbaster@2.1.1/dist/rgbaster.umd.min.js"></script>
+    <script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
+    <script src="./index.js"></script>
+  </body>
+</html>
