@@ -25,9 +25,9 @@ colorInput.addEventListener('input', () => {
 })
 
 saveBtn.addEventListener('click', async () => {
-  canvas = await html2canvas(document.querySelector('.generate'))
+  const dataUrl = await domtoimage.toPng(document.querySelector('.generate'))
   const a = document.createElement('a')
-  a.href = canvas.toDataURL()
+  a.href = dataUrl
   a.setAttribute('download', 'download-img')
   a.click()
 })
